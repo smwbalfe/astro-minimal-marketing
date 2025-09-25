@@ -89,5 +89,5 @@ export const UI = {
   theme: 'light:only'
 };
 
-export const SITE_TITLE = 'Astro Blog';
+export const SITE_TITLE = 'SubLead';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
