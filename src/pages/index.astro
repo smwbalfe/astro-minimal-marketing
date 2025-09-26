@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
 import { MarqueeDemo } from "../components/testimonials";
+import { Particles } from "@/components/ui/particles";
 ---
 <Layout
 	metadata={{
@@ -9,8 +10,16 @@ import { MarqueeDemo } from "../components/testimonials";
 			"Build your brand on Reddit & LinkedIn without getting suspended",
 	}}
 >
-	<section class="hero py-32">
-		<div class="hero-content text-center">
+	<section class="hero py-32 relative overflow-hidden">
+		<Particles 
+			client:load 
+			className="absolute inset-0 -z-10"
+			quantity={75}
+			color="#000000"
+			ease={80}
+			size={3}
+		/>
+		<div class="hero-content text-center relative z-10">
 			<div class="max-w-lg">
 				<h1 class="text-6xl text-base-content">Marketing on Reddit & LinkedIn</h1>
 				<p class="py-8 text-lg text-base-content opacity-70">Build your brand on Reddit & LinkedIn without getting suspended</p>
@@ -19,9 +28,9 @@ import { MarqueeDemo } from "../components/testimonials";
 		</div>
 	</section>
 	
-	<section class="px-32 py-16">
+	<!-- <section class="px-32 py-16">
 		<div class="border border-base-300 rounded-lg p-8 bg-base-100 shadow-sm">
 			<MarqueeDemo client:load/>
 		</div>
-	</section>
+	</section> -->
 </Layout>
