@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/PageLayout.astro";
-import { MarqueeDemo } from "../components/testimonials";
 import { Particles } from "@/components/ui/particles";
 import { RainbowButton } from "@/components/ui/rainbow-button"
+import { AvatarCirclesDemo } from "@/components/avatars";
 ---
 <Layout
 	metadata={{
@@ -21,10 +21,14 @@ import { RainbowButton } from "@/components/ui/rainbow-button"
 			size={1}
 		/>
 		<div class="hero-content text-center relative z-10">
-			<div class="max-w-lg">
-				<h1 class="text-6xl text-base-content">Marketing on Reddit & LinkedIn</h1>
-				<p class="py-8 text-lg text-base-content opacity-70">Build your brand on Reddit & LinkedIn without getting suspended</p>
-				<RainbowButton client:load className="text-white px-8 py-3 text-lg">Get Started</RainbowButton>
+			<div class="max-w-2xl">
+				<div class="flex justify-center mb-6">
+					<AvatarCirclesDemo client:load />
+				</div>
+				<p class="text-sm text-base-content opacity-60 mb-4">Trusted by 99+ founders</p>
+				<h1 class="text-6xl text-base-content">Stop Wasting Money on Dead Leads</h1>
+				<p class="py-8 text-lg text-base-content opacity-70">You're burning cash on ads that don't convert while your competitors steal your customers. Get quality leads that actually buy.</p>
+				<RainbowButton client:load className="text-white px-8 py-3 text-lg">Fix My Lead Problem</RainbowButton>
 			</div>
 		</div>
 	</section>
