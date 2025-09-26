@@ -29,7 +29,7 @@ export const METADATA = {
     type: 'website'
   },
   twitter: {
-    handle: '@simon',
+    handle: '@simonbalfe',
     site: '@simon',
     cardType: 'summary_large_image'
   }
@@ -90,4 +90,4 @@ export const UI = {
 };
 
 export const SITE_TITLE = 'SubLead';
-export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const SITE_DESCRIPTION = 'Our AI finds customers actively seeking your solution on Reddit and delivers qualified leads automatically.';

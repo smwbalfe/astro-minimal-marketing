@@ -18,18 +18,6 @@ const { title, description, pubDate, updatedDate, heroImage, categories } = Astr
 		<article class="section-padding">
 			<div class="container">
 				<div class="max-w-4xl mx-auto">
-					{heroImage && (
-						<div class="mb-8">
-							<Image
-								width={1020}
-								height={510}
-								src={heroImage}
-								alt={title}
-								class="w-full rounded-xl shadow-lg aspect-video object-cover"
-							/>
-						</div>
-					)}
-
 					<header class="mb-8 text-center">
 						<div class="mb-4 text-sm text-gray-500">
 							<FormattedDate date={pubDate} />
@@ -54,6 +42,18 @@ const { title, description, pubDate, updatedDate, heroImage, categories } = Astr
 							))}
 						</div>
 					</header>
+
+					{heroImage && (
+						<div class="mb-8">
+							<Image
+								width={1020}
+								height={510}
+								src={heroImage}
+								alt={title}
+								class="w-full rounded-xl shadow-lg aspect-video object-cover"
+							/>
+						</div>
+					)}
 
 					<Prose>
 						<slot />

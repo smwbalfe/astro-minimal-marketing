@@ -43,20 +43,7 @@ const metadata = {
 						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 							{posts.map((post) => (
 								<article class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
-									<a href={`/blog/${post.id}/`} class="block">
-										{post.data.heroImage && (
-											<div class="aspect-video overflow-hidden">
-												<Image
-													width={400}
-													height={225}
-													src={post.data.heroImage}
-													alt={post.data.title}
-													class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-												/>
-											</div>
-										)}
-									</a>
-									<div class="p-6">
+									<div class="p-6 pb-0">
 										<div class="mb-3">
 											<time class="text-sm text-gray-500">
 												<FormattedDate date={post.data.pubDate} />
@@ -72,7 +59,7 @@ const metadata = {
 												{post.data.description}
 											</p>
 										)}
-										<div class="flex flex-wrap gap-2 mb-4">
+										<div class="flex flex-wrap gap-2 mb-6">
 											{post.data.categories && post.data.categories.slice(0, 2).map(category => (
 												<a
 													href={`/blog/category/${category}`}
@@ -82,6 +69,21 @@ const metadata = {
 												</a>
 											))}
 										</div>
+									</div>
+									{post.data.heroImage && (
+										<a href={`/blog/${post.id}/`} class="block mb-4">
+											<div class="aspect-video overflow-hidden mx-6 rounded-lg">
+												<Image
+													width={400}
+													height={225}
+													src={post.data.heroImage}
+													alt={post.data.title}
+													class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+												/>
+											</div>
+										</a>
+									)}
+									<div class="px-6 pb-6">
 										<a
 											href={`/blog/${post.id}/`}
 											class="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium text-sm no-underline"

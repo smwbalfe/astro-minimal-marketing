@@ -102,6 +102,18 @@ Your landing page should include:
 - [ ] Fast loading speed (under 3 seconds)
 - [ ] Thank you page with next steps
 
+## Images
+
+### Syntax
+
+```markdown
+![Alt text](./full/or/relative/path/of/image)
+```
+
+### Output
+
+![blog placeholder](../../assets/blog-placeholder-about.jpg)
+
 ## Advanced Lead Magnet Ideas
 
 ### 4. Industry Reports and Surveys
