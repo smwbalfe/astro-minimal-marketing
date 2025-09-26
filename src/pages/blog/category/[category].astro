@@ -28,15 +28,14 @@ const { category, posts } = Astro.props;
 ---
 
 <Layout metadata={{ title: `Posts in "${category}"`, description: `All blog posts in the ${category} category` }}>
-	<Header />
 	<main class="flex-1">
-		<section class="section-padding bg-gradient-to-br from-gray-50 to-white">
+		<section class="section-padding bg-base-200">
 			<div class="container">
 				<div class="max-w-3xl mx-auto text-center">
-					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-						<span class="text-blue-600">{category}</span> Category
+					<h1 class="text-4xl md:text-5xl font-bold text-base-content mb-6">
+						<span class="text-primary">{category}</span> Category
 					</h1>
-					<p class="text-xl text-gray-600">
+					<p class="text-xl text-base-content/70">
 						{posts.length} post{posts.length !== 1 ? 's' : ''} in this category
 					</p>
 				</div>
@@ -48,7 +47,7 @@ const { category, posts } = Astro.props;
 				<div class="max-w-6xl mx-auto">
 					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 						{posts.map((post) => (
-							<article class="group bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+							<article class="group bg-base-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
 								<a href={`/blog/${post.id}/`} class="block">
 									{post.data.heroImage && (
 										<div class="aspect-video overflow-hidden">
@@ -64,23 +63,23 @@ const { category, posts } = Astro.props;
 								</a>
 								<div class="p-6">
 									<div class="mb-3">
-										<time class="text-sm text-gray-500">
+										<time class="text-sm text-base-content/60">
 											<FormattedDate date={post.data.pubDate} />
 										</time>
 									</div>
-									<h2 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+									<h2 class="text-xl font-bold text-base-content mb-3 group-hover:text-primary transition-colors line-clamp-2">
 										<a href={`/blog/${post.id}/`} class="no-underline">
 											{post.data.title}
 										</a>
 									</h2>
 									{post.data.description && (
-										<p class="text-gray-600 mb-4 line-clamp-3 text-sm">
+										<p class="text-base-content/70 mb-4 line-clamp-3 text-sm">
 											{post.data.description}
 										</p>
 									)}
 									<a
 										href={`/blog/${post.id}/`}
-										class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm no-underline"
+										class="inline-flex items-center text-primary hover:text-primary/80 font-medium text-sm no-underline"
 									>
 										Read more
 										<svg class="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,6 +94,5 @@ const { category, posts } = Astro.props;
 			</div>
 		</section>
 	</main>
-	<Footer />
 </Layout>
 
