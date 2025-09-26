@@ -1,206 +1,27 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Layout from "../layouts/PageLayout.astro";
+import { MarqueeDemo } from "../components/testimonials";
 ---
-
-<Layout metadata={{ title: SITE_TITLE, description: SITE_DESCRIPTION }}>
-	<Header />
-
-	<main class="flex-1">
-		<!-- Hero Section -->
-		<section class="py-20 bg-gradient-to-br from-slate-50 via-white to-orange-50/30">
-			<div class="container mx-auto px-4">
-				<div class="text-center mb-8">
-					<h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-6 max-w-5xl mx-auto leading-tight">
-						Stop Missing Customers that are<br>
-						<span class="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">Ready to Buy on Reddit</span>
-					</h1>
-
-					<p class="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
-						Our AI finds customers actively seeking your solution on Reddit and delivers qualified leads automatically.
-					</p>
-
-					<button class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-lg px-8 py-4 rounded-xl mb-12 shadow-xl shadow-orange-500/25 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40">
-						Go to App
-					</button>
-				</div>
+<Layout
+	metadata={{
+		title: "Marketing on Reddit & LinkedIn",
+		description:
+			"Build your brand on Reddit & LinkedIn without getting suspended",
+	}}
+>
+	<section class="hero py-32">
+		<div class="hero-content text-center">
+			<div class="max-w-lg">
+				<h1 class="text-6xl text-base-content">Marketing on Reddit & LinkedIn</h1>
+				<p class="py-8 text-lg text-base-content opacity-70">Build your brand on Reddit & LinkedIn without getting suspended</p>
+				<button class="btn btn-primary btn-lg">Get Started</button>
 			</div>
-		</section>
-
-		<!-- Why Choose Section -->
-		<section class="py-16 bg-slate-50/50">
-			<div class="container mx-auto px-4">
-				<div class="max-w-4xl mx-auto">
-					<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-						Why Choose SubLead Over Manual Monitoring?
-					</h2>
-					<p class="text-lg text-slate-600 mb-12 text-center">
-						Stop wasting hours manually searching Reddit. Our AI agent delivers better results faster.
-					</p>
-
-					<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-						<div class="text-left bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300">
-							<h3 class="text-2xl font-bold text-slate-900 mb-4">Save Massive Time</h3>
-							<p class="text-slate-600 mb-3">
-								Manual Reddit monitoring takes hours weekly. SubLead automates it all, running 24/7.
-							</p>
-							<p class="text-sm bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent font-medium">
-								From hours of work → automated monitoring
-							</p>
-						</div>
-
-						<div class="text-left bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300">
-							<h3 class="text-2xl font-bold text-slate-900 mb-4">Massive ROI Potential</h3>
-							<p class="text-slate-600 mb-3">
-								Find more qualified leads faster. Each converted lead pays for months of service.
-							</p>
-							<p class="text-sm bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent font-medium">
-								Low monthly cost → high revenue potential
-							</p>
-						</div>
-
-						<div class="text-left bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300">
-							<h3 class="text-2xl font-bold text-slate-900 mb-4">Never Miss Opportunities</h3>
-							<p class="text-slate-600 mb-3">
-								Manual searches miss most relevant conversations. AI catches them all in real-time.
-							</p>
-							<p class="text-sm bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent font-medium">
-								24/7 monitoring vs. part-time manual checks
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- How It Works Section -->
-		<section class="py-16 bg-gradient-to-br from-white to-slate-50">
-			<div class="container mx-auto px-4">
-				<div class="max-w-4xl mx-auto">
-					<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-						How It Works
-					</h2>
-					<p class="text-lg text-slate-600 mb-12 text-center">
-						Four simple steps to turn Reddit into your lead generation engine.
-					</p>
-
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-						<div class="relative p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<div class="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center text-white text-sm font-bold">01</div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3 ml-6">Enter Your ICP</h3>
-							<p class="text-slate-600 ml-6">
-								Describe your ideal customer profile using natural language - their problems, needs, and characteristics.
-							</p>
-						</div>
-
-						<div class="relative p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<div class="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center text-white text-sm font-bold">02</div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3 ml-6">AI Scans Reddit</h3>
-							<p class="text-slate-600 ml-6">
-								Our AI continuously scans Reddit posts and comments across relevant subreddits to find potential leads.
-							</p>
-						</div>
-
-						<div class="relative p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<div class="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center text-white text-sm font-bold">03</div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3 ml-6">Lead Quality Scoring</h3>
-							<p class="text-slate-600 ml-6">
-								Each lead gets a quality percentage score based on multiple dimensions to prioritize your best prospects.
-							</p>
-						</div>
-
-						<div class="relative p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<div class="absolute -top-3 -left-3 w-8 h-8 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center text-white text-sm font-bold">04</div>
-							<h3 class="text-2xl font-bold text-slate-900 mb-3 ml-6">Generate Replies</h3>
-							<p class="text-slate-600 ml-6">
-								Automatically generate personalized, contextual responses tailored to each conversation and opportunity.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- FAQ Section -->
-		<section class="py-16 bg-slate-50/30">
-			<div class="container mx-auto px-4">
-				<div class="max-w-3xl mx-auto">
-					<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
-						Frequently Asked Questions
-					</h2>
-					<p class="text-lg text-slate-600 mb-12 text-center">
-						Common questions about our Reddit lead monitoring platform
-					</p>
-
-					<div class="space-y-3">
-						<details class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<summary class="cursor-pointer p-6 font-semibold text-slate-900 hover:bg-slate-50/50 select-none rounded-2xl">
-								What is SubLead?
-							</summary>
-							<div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
-								SubLead is an AI-powered platform that monitors Reddit conversations to find potential customers actively seeking solutions like yours, automatically delivering qualified leads.
-							</div>
-						</details>
-
-						<details class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<summary class="cursor-pointer p-6 font-semibold text-slate-900 hover:bg-slate-50/50 select-none rounded-2xl">
-								How does pricing work?
-							</summary>
-							<div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
-								We offer flexible pricing plans based on your monitoring needs and lead volume. Each plan includes AI scanning, lead scoring, and automated response generation.
-							</div>
-						</details>
-
-						<details class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<summary class="cursor-pointer p-6 font-semibold text-slate-900 hover:bg-slate-50/50 select-none rounded-2xl">
-								Which subreddits can you monitor?
-							</summary>
-							<div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
-								Our AI can monitor any public subreddit relevant to your business. We automatically identify the most relevant communities based on your ideal customer profile.
-							</div>
-						</details>
-
-						<details class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<summary class="cursor-pointer p-6 font-semibold text-slate-900 hover:bg-slate-50/50 select-none rounded-2xl">
-								How does the AI identify leads?
-							</summary>
-							<div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
-								Our AI analyzes post content, comment context, user behavior, and conversation patterns to identify users who match your ideal customer profile and show buying intent.
-							</div>
-						</details>
-
-						<details class="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md hover:shadow-orange-500/5 transition-all duration-300">
-							<summary class="cursor-pointer p-6 font-semibold text-slate-900 hover:bg-slate-50/50 select-none rounded-2xl">
-								Do you offer support?
-							</summary>
-							<div class="px-6 pb-6 text-slate-600 border-t border-slate-100 pt-4 mt-2">
-								Yes, we provide comprehensive support including onboarding assistance, strategy consultation, and ongoing technical support to help you maximize your results.
-							</div>
-						</details>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- CTA Section -->
-		<section class="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-			<div class="container mx-auto px-4">
-				<div class="max-w-3xl mx-auto text-center">
-					<h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
-						Ready to Find Your Next Customers?
-					</h2>
-					<p class="text-xl text-slate-300 mb-8">
-						Stop missing qualified leads on Reddit. Start your automated lead generation today.
-					</p>
-					<button class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-xl shadow-orange-500/25 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/40">
-						Go to App
-					</button>
-				</div>
-			</div>
-		</section>
-	</main>
-
-	<Footer />
+		</div>
+	</section>
+	
+	<section class="px-32 py-16">
+		<div class="border border-base-300 rounded-lg p-8 bg-base-100 shadow-sm">
+			<MarqueeDemo client:load/>
+		</div>
+	</section>
 </Layout>

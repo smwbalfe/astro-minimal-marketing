@@ -1,7 +1,5 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/PageLayout.astro";
 ---
 
 <Layout
@@ -10,70 +8,24 @@ import Layout from "../layouts/Layout.astro";
     description: "Build your brand on Reddit & LinkedIn without getting suspended",
   }}
 >
-  <Header />
   <main class="flex-1">
-    <section class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-8">
-          <div class="inline-flex items-center bg-green-100 px-4 py-2 rounded-full mb-6">
-            <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-            <span class="text-green-700 text-sm font-medium">7 founders joined this week!</span>
-          </div>
-          
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 max-w-5xl mx-auto leading-tight">
-            Marketing on Reddit & LinkedIn
+    <section class="hero py-16">
+      <div class="hero-content text-center">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 mx-auto leading-tight">
+            Your Perfect Customers Are on Reddit Right Now
           </h1>
           
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-8">
-            without getting <span class="bg-yellow-200 px-2 py-1 rounded">suspended</span>
-          </h2>
-          
-          <p class="text-xl text-gray-600 mb-4 max-w-3xl mx-auto">
-            Build your brand on Reddit & LinkedIn — with a step-by-step roadmap.
-          </p>
-          <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            New accounts often get flagged or banned — our system helps you grow <strong>safer</strong>, <strong>faster</strong>, and <strong>smarter</strong>.
+          <p class="text-xl mb-8 max-w-xl mx-auto text-muted-foreground">
+            While you're wasting money on ads, your competitors are finding ready-to-buy customers in Reddit discussions for free.
           </p>
           
-          <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-4 rounded-full mb-12 shadow-lg transition-colors">
-            Get Instant Access
+          <button class="btn btn-lg px-8 py-4 text-lg hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-full">
+            Stop Missing Out
           </button>
-          
-          <div class="flex justify-center items-center mb-6">
-            <div class="flex -space-x-2">
-              <div class="w-12 h-12 rounded-full bg-gray-300 border-2 border-white"></div>
-              <div class="w-12 h-12 rounded-full bg-blue-400 border-2 border-white"></div>
-              <div class="w-12 h-12 rounded-full bg-purple-400 border-2 border-white"></div>
-              <div class="w-12 h-12 rounded-full bg-green-400 border-2 border-white"></div>
-              <div class="w-12 h-12 rounded-full bg-yellow-400 border-2 border-white"></div>
-              <div class="w-12 h-12 rounded-full bg-red-400 border-2 border-white"></div>
-              <div class="w-12 h-12 rounded-full bg-indigo-400 border-2 border-white"></div>
-            </div>
-          </div>
-          
-          <div class="flex justify-center items-center">
-            <div class="flex text-yellow-400 mr-2">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-            </div>
-            <span class="text-gray-700 font-medium">Loved by <strong>156+</strong> creators</span>
-          </div>
+         
         </div>
       </div>
     </section>
   </main>
-  <Footer />
 </Layout>
